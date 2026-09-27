@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "김창우 | 링크나무",
-  description: "비개발자 출신 바이브코더 | 요즘에 AI 개발에 관심이 많아요",
+  description: "비개발자 출신 바이브코더 | 요즘 AI 개발에 관심이 많아요",
 };
 
 export const viewport: Viewport = {

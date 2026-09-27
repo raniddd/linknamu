@@ -3,25 +3,25 @@ import LinkCard from "@/components/LinkCard";
 
 const profile = {
   name: "김창우",
-  bio: "비개발자 출신 바이브코더 | 요즘에 AI 개발에 관심이 많아요",
+  bio: "비개발자 출신 바이브코더 | 요즘 AI 개발에 관심이 많아요",
   avatar: "/Profile.png",
 };
 
 const links = [
-  { id: "github", icon: "🦊", title: "깃허브", url: "https://github.com/raniddd" },
+  { id: "github", icon: "🦊", title: "GitHub", url: "https://github.com/raniddd" },
   {
     id: "blog",
     icon: "✍️",
-    title: "블로그",
+    title: "Blog",
     url: "https://blog.naver.com/road_to_happiness_",
   },
   {
     id: "linkedin",
     icon: "👤",
-    title: "링크드인",
+    title: "LinkedIn",
     url: "https://www.linkedin.com/in/changwoo-kim-7a553a139/",
   },
-  { id: "email", icon: "✉️", title: "이메일", url: "mailto:kcw3010@gmail.com" },
+  { id: "email", icon: "✉️", title: "e-mail", url: "mailto:kcw3010@gmail.com" },
 ];
 
 export default function Home() {
