@@ -1,28 +1,49 @@
 @import "tailwindcss";
+@import "./pretendard.css";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #171717;
+  --background: #fffaf4;
+  --foreground: #2d221a;
+  /* 따뜻한 살구색 계열 포인트 컬러 */
+  --accent: #e08c53;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+  --font-sans:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #191310;
+    --foreground: #f4ece4;
+    --accent: #e8a071;
   }
 }
 
 body {
+  /* 크림 → 연한 살구색으로 번지는 부드러운 그라데이션 */
   background:
-    radial-gradient(60rem 40rem at 50% -10%, color-mix(in oklab, #10b981 12%, transparent), transparent),
-    var(--background);
+    radial-gradient(
+      70rem 45rem at 50% -20%,
+      color-mix(in oklab, var(--accent) 26%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      45rem 35rem at 105% 105%,
+      color-mix(in oklab, var(--accent) 16%, transparent),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      var(--background) 0%,
+      color-mix(in oklab, var(--accent) 12%, var(--background)) 100%
+    );
+  background-repeat: no-repeat;
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-sans);
 }
